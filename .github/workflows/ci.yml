@@ -1,0 +1,33 @@
+name: Playwright QA
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  test:
+    name: Run Playwright suite
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run typecheck
+      - run: npm test
+        env:
+          CI: true
+      - name: Upload report and failure artifacts
+        if: ${{ !cancelled() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-and-results
+          path: |
+            playwright-report/
+            test-results/
+          retention-days: 14
