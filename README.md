@@ -1,5 +1,7 @@
 # QA Automation Portfolio — Playwright + TypeScript
 
+Need a focused check before a release? See my [web and API review pilot](SERVICES.md) and [demonstration case study](CASE-STUDY.md).
+
 An independently created portfolio example demonstrating browser and API test automation. It exercises the public SauceDemo sample storefront and performs read-only API checks against JSONPlaceholder. This is not client work and is not affiliated with either service.
 
 ## What it covers

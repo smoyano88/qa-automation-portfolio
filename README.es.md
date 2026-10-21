@@ -1,5 +1,7 @@
 # Portfolio de QA Automation — Playwright + TypeScript
 
+¿Necesitás revisar una versión antes de publicarla? [Ver el servicio piloto de revisión web y API](SERVICIOS.es.md) y el [caso demostrativo](CASE-STUDY.es.md).
+
 Ejemplo de portfolio creado de forma independiente para mostrar automatización de pruebas web y API. Prueba la tienda demo pública SauceDemo y realiza validaciones de solo lectura contra JSONPlaceholder. No es trabajo para un cliente ni está afiliado a esos servicios.
 
 ## Cobertura
